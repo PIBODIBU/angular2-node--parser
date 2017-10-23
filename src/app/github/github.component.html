@@ -1,0 +1,9 @@
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Type username" [(ngModel)]="username">
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="fetchData()">Fetch repositories</button>
+
+<div *ngFor="let repo of repos">
+  <a href="{{repo.html_url}}" target="_blank">{{repo.html_url}}</a>
+</div>
